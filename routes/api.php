@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Используем метод GET по условию задания (однако для таких запросов необходимо использовать метод POST)
-Route::get('user_auth', 'App\Http\Controllers\UserController@auth');
+Route::get('user_auth', 'App\Http\Controllers\AuthController@auth');
