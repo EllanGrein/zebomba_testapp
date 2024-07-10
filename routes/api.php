@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Используем метод GET по условию задания (однако для таких запросов необходимо использовать метод POST)
+Route::get('user_auth', 'App\Http\Controllers\UserController@auth');
