@@ -2,9 +2,9 @@
 
 ### Разворачивание проекта (local)
 
-- Установить `Composer` и `Docker`
+- Установить `Composer` и `Docker / Docker Compose` 
 - Склонировать репозиторий: `git clone git@github.com:EllanGrein/zebomba_testapp.git`
-- В корне проекта выполнить следующие команды:
+- В корне проекта выполнить следующее:
 - `cp .env.example .env`
 - Установить переменные `WWWUSER` и `WWWGROUP` в `.env` на `uid:gid` текущего пользователя (по умолчанию `1000:1000`)
 - `composer install`
