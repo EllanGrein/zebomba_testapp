@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -35,6 +34,11 @@ class User extends Authenticatable
 
     public $timestamps = false;
 
+    /**
+     * Связь с сессией пользователя
+     *
+     * @return HasOne
+     */
     public function session(): HasOne
     {
         return $this->hasOne(UserSession::class, 'user_id', 'user_id');

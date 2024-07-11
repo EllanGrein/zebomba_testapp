@@ -47,6 +47,12 @@ class AuthService
         return mb_strtolower(md5($str), 'UTF-8');
     }
 
+    /**
+     * Создание / обновление пользователя
+     *
+     * @param $data
+     * @return User
+     */
     public function updateOrCreate($data): User
     {
         // Создаем или обновляем пользователя

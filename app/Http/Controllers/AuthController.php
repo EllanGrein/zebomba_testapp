@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AuthRequest;
 use App\Http\Resources\UserResource;
 use App\Services\AuthService;
+use Illuminate\Http\JsonResponse;
 
 class AuthController extends AppBaseController
 {
@@ -18,7 +19,14 @@ class AuthController extends AppBaseController
         $this->authService = $authService;
     }
 
-    public function auth(AuthRequest $request)
+    /**
+     * Метод авторизации/регистрации
+     * URI: /user_auth
+     *
+     * @param AuthRequest $request
+     * @return JsonResponse
+     */
+    public function auth(AuthRequest $request): JsonResponse
     {
         $data = $request->validated();
 

@@ -19,7 +19,10 @@ class AppBaseController extends Controller
 
     public function sendError($error, $error_key, $code = 404): JsonResponse
     {
-        $this->error = ['error' => $error, 'error_key' => $error_key];
+        $this->error = [
+            'error'     => $error,
+            'error_key' => $error_key
+        ];
 
         return response()->json($this->error, $code);
     }
